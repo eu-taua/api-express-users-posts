@@ -8,11 +8,7 @@ const HOSTNAME = process.env.HOSTNAME || "http://localhost";
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000"],
-  })
-);
+app.use(cors());
 
 app.use(usersRoutes);
 app.use(postsRoutes);
